@@ -263,6 +263,12 @@ semilogx(f,p(:,5),'color',[0.3 0.3 0.3],'linewidth',2)
 semilogx(f,p(:,1),'color',[0.4 0.4 0.4],'linewidth',2)
 
 semilogx(f,RMSlevel,'m','linewidth',2)   %RMS Level
+
+%% Wenz curves
+load('Wenz_limits.mat')
+semilogx(freq_lower,wenz_lower,':r','linewidth',1.5)
+semilogx(freq_upper,wenz_upper,':r','linewidth',1.5)
+
 set(gca,'XScale','log','TickDir','out','layer','top','fontsize',14,'fontname','Arial')
 elseif linlog == 1
     if M>1000
